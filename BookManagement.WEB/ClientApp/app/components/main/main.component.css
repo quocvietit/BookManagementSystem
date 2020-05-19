@@ -1,0 +1,53 @@
+﻿.container {
+    width: 100%;
+    margin: 0px;
+    position: relative;
+    background: #F3F3F3;
+}
+
+.top {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 40px;
+    position: fixed;
+    z-index: 2;
+}
+
+.left {
+    left: 0px;
+    bottom: 0px;
+    margin-top: 0px;
+    height: calc(100% - 50px);
+    position: fixed;
+    z-index: 1;
+}
+
+.right {
+    position: absolute;
+    right: 0px;
+    margin-top: 50px;
+}
+
+footer {
+    bottom: 0px;
+    z-index: 1;
+}
+
+.content {
+    background: #F3F3F3;
+}
+
+.boder-line {
+    border-right: 1px solid #ebebeb;
+}
+
+.col-lg-3 {
+    width: 20%;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.col-lg-9 {
+    width: 80%;
+}

@@ -1,0 +1,17 @@
+﻿<div class="login-page">
+    <div class="form">
+        <div class="title-icon">
+            <div>
+                <i class="fa fa-user-circle"></i>
+            </div>
+            <p>Hi there! Please Sign in</p>
+        </div>
+        <form class="login-form form-group" [formGroup]="loginForm" (ngSubmit)="login();">
+            <br>
+            <input type="text" placeholder="Email Address" formControlName="UserName" class="form-control" />
+            <input type="password" placeholder="Password" formControlName="Password" class="form-control" />
+            <button type="submit" ><span class="glyphicon glyphicon-arrow-right"></span></button>
+        </form>
+    </div>
+</div>
+<div class="loader" *ngIf="loading"></div>

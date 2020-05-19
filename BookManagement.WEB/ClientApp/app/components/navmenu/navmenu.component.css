@@ -1,0 +1,88 @@
+li .glyphicon {
+    margin-right: 10px;
+}
+
+li.link-active a,
+li.link-active a:hover,
+li.link-active a:focus {
+    color: #32c789;
+    background: none;
+}
+
+.main-nav {
+    left: 0;
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+
+@media (min-width: 768px) {
+    /* On small screens, convert the nav menu to a vertical sidebar */
+    .main-nav {
+        height: 100%;
+    }
+
+    .navbar {
+        border-radius: 0px;
+        height: 100%;
+        margin: 0px auto;
+    }
+
+    .navbar-header {
+        float: none;
+    }
+
+    .navbar ul {
+        float: none;
+    }
+
+    .navbar li {
+        float: none;
+        font-size: 15px;
+        margin: 6px;
+        margin-left: 10px;
+    }
+
+        .navbar li a {
+            padding: 10px 16px;
+        }
+
+    .navbar a {
+        /* If a menu item's text is too long, truncate it */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #858190;
+    }
+}
+
+.gly-rotate {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.nav > li > a:hover {
+    background: none;
+}
+
+li a,
+li a:hover,
+li a:focus {
+    background: none;
+}
+.user-block {
+    background-color: #DCDCDC;
+    margin: 20px 10px 10px 10px;
+    border-radius: 3px;
+    padding: 5px;
+}
+.user-block .user-avatar {
+    float: left;
+}
+
+.user-block .user-info, .user-avatar {
+    margin: 8px;
+}

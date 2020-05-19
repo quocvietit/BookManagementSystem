@@ -1,0 +1,45 @@
+﻿<div class='main-nav'>
+    <div class="user-block">
+        <div class="user-avatar">
+            <i class="fa fa-user-circle fa-3x" aria-hidden="true"></i>
+        </div>
+        <div class="user-info">
+            <div style="font-weight:bold">Admin</div>
+            <div>Admin@vqv.com.vn</div>
+        </div>
+    </div>
+    <div class='navbar'>
+        <ul class='nav navbar-nav text'>
+            <li [routerLinkActive]="['link-active']">
+                <a [routerLink]="['/home']">
+                    <span class='glyphicon glyphicon-home'></span> Trang chính
+                </a>
+            </li>
+            <li [routerLinkActive]="['link-active']">
+                <a [routerLink]="['/category']">
+                    <span class='glyphicon glyphicon-menu-hamburger gly-rotate'></span> Danh mục sách
+                </a>
+            </li>
+            <li [routerLinkActive]="['link-active']">
+                <a [routerLink]="['/author']">
+                    <span class='glyphicon glyphicon-magnet'></span> Quản lý tác giả
+                </a>
+            </li>
+            <li [routerLinkActive]="['link-active']">
+                <a [routerLink]="['/publisher']">
+                    <span class='glyphicon glyphicon-th-large'></span> Quản lý nhà xuất bản
+                </a>
+            </li>
+            <li [routerLinkActive]="['link-active']">
+                <a [routerLink]="['/book']">
+                    <span class='glyphicon glyphicon-th-list'></span> Quản lý sách
+                </a>
+            </li>
+            <li [routerLinkActive]="['link-active']">
+                <a [routerLink]="['/login']">
+                    <span class='glyphicon glyphicon-lock'></span> Thoát
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+﻿<h3 >{{title}}</h3>
+<div class="my-container">
+    <form [formGroup]="form" class="form-group" (ngSubmit)="edit();">
+        <h3>Thông tin sách </h3>
+        <p>Vui lòng điền đầy đủ thông tin</p>
+        <div class="row">
+            <div class="col-sm-5">
+                <input type="text" placeholder="Tựa sách" [(ngModel)]="bookEdit.title" formControlName="Title" class="form-control">
+                
+                <br>
+                <input type="text" placeholder="Mô tả" [(ngModel)]="bookEdit.summary" formControlName="Summary" class="form-control">
+                <br>
+                <!--Select category -->
+                <select [(ngModel)]="bookEdit.cateId" formControlName="CateId" class="form-control">
+                    <option value="0" disabled selected>Chọn danh mục</option>
+                    <option *ngFor="let cate of categories"
+                            [value]="cate.cateId">
+                        {{cate.cateName}}
+                    </option>
+                </select>
+                <br>
+
+                <!--Select author-->
+                <select [(ngModel)]="bookEdit.authorId" formControlName="AuthorId" class="form-control">
+                    <option value="0" disabled selected>Chọn tác giả</option>
+                    <option *ngFor="let author of authors"
+                            [value]="author.authorId">
+                        {{ author.authorName }}
+                    </option>
+                </select>
+                <br>
+
+                <!--Select author-->
+                <select [(ngModel)]="bookEdit.pubId" formControlName="PubId" class="form-control">
+                    <option value="0" disabled selected>Chọn nhà sản xuất</option>
+                    <option *ngFor="let publisher of publishers"
+                            [value]="publisher.pubId">
+                        {{ publisher.name }}
+                    </option>
+                </select>
+                <br>
+
+                <input type="text" placeholder="Giá" [(ngModel)]="bookEdit.price" formControlName="Price" class="form-control">
+                <br>
+                <input type="text" placeholder="Số lượng" [(ngModel)]="bookEdit.quantity" formControlName="Quantity" class="form-control">
+                <br>
+
+                <!--Select active-->
+                <select [(ngModel)]="bookEdit.isActive" formControlName="IsActive" class="form-control">
+                    <option value="0" disabled selected>Chọn trạng thái</option>
+                    <option value="true">Đang bán</option>
+                    <option value="false">Chưa bán</option>
+                </select>
+                <br>
+            </div>
+            <div class="col-sm-7">
+                <div>
+                    <img *ngIf="url != ''" [src]="url" class="img-responsive"  width="400" height="350">
+                    <label for="upload" tabindex="0"></label>
+                    <input id="upload" type="file" name="upload" (change)="readUrl($event)">
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-success" (click)="back();">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                Quay lại
+            </button>
+            <button class="btn btn-danger" type="submit">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                {{btnAction}}
+            </button>
+            <label class="loader" *ngIf="loading"></label>
+            <br>
+        </div>
+    </form>
+</div>
+    <p-growl [value]="msgs"></p-growl>
+    <p-confirmDialog header="Confirmation" icon="fa fa-question-circle" width="425"></p-confirmDialog>

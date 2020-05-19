@@ -1,0 +1,24 @@
+﻿<h3>{{title}}</h3>
+<div class="my-container">
+    <form [formGroup]="form" class="form-group col-sm-6" (ngSubmit)="edit();">
+        <h3>Thông tin danh mục sách</h3>
+        <p>Vui lòng điền đầy đủ thông tin</p>
+        <input type="text" placeholder="Danh mục" [(ngModel)]="category.cateName" formControlName="CateName" class="form-control">
+        <br>
+        <input type="text" placeholder="Mô tả" [(ngModel)]="category.description" formControlName="Description" class="form-control">
+        <br>
+        <div>
+            <button class="btn btn-success" (click)="back();">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                Quay lại
+            </button>
+            <button class="btn btn-danger" type="submit">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                {{btnAction}}
+            </button>
+            <label class="loader" *ngIf="loading"></label>
+        </div>
+    </form>
+</div>
+    <p-growl [value]="msgs"></p-growl>
+    <p-confirmDialog header="Confirmation" icon="fa fa-question-circle" width="425"></p-confirmDialog>

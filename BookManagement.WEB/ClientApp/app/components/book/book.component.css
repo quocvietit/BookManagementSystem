@@ -1,0 +1,57 @@
+﻿.action,
+.action:hover,
+.action:enabled:hover {
+    border: none;
+    border-radius: 50%;
+    color: white;
+}
+
+.table {
+    text-align: center;
+}
+
+.edit {
+    background: #459cf2;
+}
+
+.detail {
+    background: #32c787;
+}
+
+.delete {
+    background: #ff5652;
+}
+
+.btn-add {
+    border: 1px solid #6ebdfa;
+    background: none;
+    color: #6ebdfa;
+    font: 20;
+}
+
+.content-top {
+    margin-bottom: 20px;
+}
+.my-container {
+    background: #FFFFFF;
+    padding: 10px;
+}
+.loader {
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 5px solid #7f7575;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BookManagement</title>
+    <base href="~/" />
+    <link rel="stylesheet" href="~/dist/vendor.css" asp-append-version="true" />
+    <style>
+        body {
+            background: #f3f3f3;
+        }
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 5px solid #7f7575;
+            width: 24px;
+             height: 24px;
+            animation: spin 1s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    @RenderBody()
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
